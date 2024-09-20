@@ -1,0 +1,10 @@
+Step 1 - CREATE DATABASE wordgame;
+step 2 - USE wordgame;
+step 3 - CREATE TABLE leaderboard(
+    Position INT AUTO_INCREMENT PRIMARY KEY,
+    PlayerName VARCHAR(255) NOT NULL,
+    WordGiven VARCHAR(255) NOT NULL,
+    Matches TEXT NOT NULL,
+    TimeTaken DECIMAL(10,2) NOT NULL
+);
+NOTE: for my computer i am using port 3308.

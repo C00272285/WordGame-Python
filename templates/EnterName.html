@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Name</title>
+</head>
+
+<body>
+    <h1>Congratulations!</h1>
+    <p>You completed the game in {{ time_taken }} seconds.</p>
+    <p>Valid Words: {{ valid_words }}</p>
+    <form action="{{ url_for('submit_name') }}" method="post">
+        <label for="playername">Enter your name:</label>
+        <input type="text" id="playername" name="playername" required>
+        <input type="hidden" name="sourceword" value="{{ source_word }}">
+        <input type="hidden" name="validwords" value="{{ validwords }}">
+        <input type="hidden" name="timetaken" value="{{ time_taken }}">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

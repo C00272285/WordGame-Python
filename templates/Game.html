@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Game</title>
+</head>
+<body>
+    <h2>Word Game</h2>
+    <p>Source Word: {{ source_word }}</p>
+    <form method="POST" action="/game">
+        <input type="hidden" name="source_word" value="{{ source_word }}">
+        <input type="hidden" name="start_time" value="{{ start_time }}">
+        
+        <label for="user_input">Enter your words:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <br>
+        
+        <button type="submit">Submit</button>
+    </form>
+    
+    {% if feedback %}
+    <p style="color: red;">{{ feedback }}</p>
+    {% endif %}
+</body>
+</html>
